@@ -18,11 +18,13 @@ public class App {
     private JTable pentagramTable;
     private JPanel mainPanel;
     private JPanel notesPanel;
-    private JTextField textField1;
+    private JTextField melodyField;
     private JButton playButton;
     private JButton undoButton;
     private JButton resetButton;
+    private List notes;
     private List melody;
+    private List pentagramPositions;
 
     private void addActionListener(JButton jButton, List list){
         jButton.addActionListener(new ActionListener() {
@@ -33,44 +35,71 @@ public class App {
         });
     }
 
+    private void initializePentagramPositions(List pentagramPositions){
+        pentagramPositions.add('C');
+        pentagramPositions.add('D');
+        pentagramPositions.add('E');
+        pentagramPositions.add('F');
+        pentagramPositions.add('G');
+        pentagramPositions.add('A');
+        pentagramPositions.add('B');
+    }
+
+    public void fillMelodyField(){
+        melodyField.setText(String.join(" ", melody));
+    }
+
     public App() {
 
+        notes = new ArrayList();
         melody = new ArrayList();
+        pentagramPositions = new ArrayList();
 
-        redondaButton.setActionCommand("redonda");
-        blancaButton.setActionCommand("blanca");
-        negraButton.setActionCommand("negra");
-        corcheaButton.setActionCommand("corchea");
-        semicorcheaButton.setActionCommand("semicorchea");
-        fusaButton.setActionCommand("fusa");
-        semifusaButton.setActionCommand("semifusa");
+        this.initializePentagramPositions(pentagramPositions);
 
-        this.addActionListener(redondaButton, melody);
-        this.addActionListener(blancaButton, melody);
-        this.addActionListener(negraButton, melody);
-        this.addActionListener(corcheaButton, melody);
-        this.addActionListener(semicorcheaButton, melody);
-        this.addActionListener(fusaButton, melody);
-        this.addActionListener(semifusaButton, melody);
+        redondaButton.setActionCommand("w");
+        blancaButton.setActionCommand("h");
+        negraButton.setActionCommand("q");
+        corcheaButton.setActionCommand("i");
+        semicorcheaButton.setActionCommand("s");
+        fusaButton.setActionCommand("t");
+        semifusaButton.setActionCommand("x");
+
+        this.addActionListener(redondaButton, notes);
+        this.addActionListener(blancaButton, notes);
+        this.addActionListener(negraButton, notes);
+        this.addActionListener(corcheaButton, notes);
+        this.addActionListener(semicorcheaButton, notes);
+        this.addActionListener(fusaButton, notes);
+        this.addActionListener(semifusaButton, notes);
 
         pentagramTable.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseReleased(MouseEvent e) {
                 JTable target = (JTable) e.getSource();
                 setCellValue(target, target.getSelectedColumn(), target.getSelectedRow());
+                melody.add(pentagramPositions.get(target.getSelectedRow()).toString() + '5' + notes.get(notes.size() -1 ).toString()); // Bug
+                fillMelodyField();
+            }
+        });
+
+        playButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
             }
         });
     }
 
     private void setCellValue(JTable target, Integer row, Integer column) {
-        if(melody.size() > 0){
-            target.setValueAt(melody.get(melody.size() -1 ), column, row);
+        if(notes.size() > 0){
+            target.setValueAt(notes.get(notes.size() -1 ), column, row);
         }
     }
 
     private void createUIComponents() {
         pentagramPanel = new JPanel();
-        Integer rows = 10;
+        Integer rows = 7;
         Integer columns = 20;
 
         pentagramTable = new JTable(rows, columns){
