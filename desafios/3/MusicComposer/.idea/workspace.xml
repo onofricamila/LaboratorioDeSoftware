@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2065610-5c6a-412b-9c5c-0593acd0279c" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -17,9 +19,10 @@
       <file leaf-file-name="App.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+            <state relative-caret-position="436">
+              <caret line="121" column="57" selection-start-line="121" selection-start-column="57" selection-end-line="121" selection-end-column="57" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#734#735#0" expanded="true" />
                 <element signature="e#796#797#0" expanded="true" />
                 <element signature="e#1483#1484#0" expanded="true" />
@@ -29,6 +32,8 @@
                 <element signature="e#3155#3156#0" expanded="true" />
                 <element signature="e#3192#3193#0" expanded="true" />
                 <element signature="e#3681#3719#0" expanded="true" />
+                <element signature="e#4469#4470#0" expanded="true" />
+                <element signature="e#4555#4556#0" expanded="true" />
                 <element signature="e#4646#4647#0" expanded="true" />
                 <element signature="e#4690#4691#0" expanded="true" />
               </folding>
@@ -56,8 +61,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/App.form" />
         <option value="$PROJECT_DIR$/src/PentagramPosition.java" />
+        <option value="$PROJECT_DIR$/src/App.form" />
         <option value="$PROJECT_DIR$/src/App.java" />
       </list>
     </option>
@@ -196,12 +201,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1537126824226</updated>
-      <workItem from="1537126828037" duration="11491000" />
+      <workItem from="1537126828037" duration="12042000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11491000" />
+    <option name="totallyTimeSpent" value="12042000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="49" y="27" width="1871" height="1053" extended-state="6" />
@@ -221,7 +226,7 @@
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19616438" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09917808" />
       <window_info anchor="right" id="Database" />
       <window_info id="Learn" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -284,9 +289,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        <state relative-caret-position="436">
+          <caret line="121" column="57" selection-start-line="121" selection-start-column="57" selection-end-line="121" selection-end-column="57" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#734#735#0" expanded="true" />
             <element signature="e#796#797#0" expanded="true" />
             <element signature="e#1483#1484#0" expanded="true" />
@@ -296,6 +302,8 @@
             <element signature="e#3155#3156#0" expanded="true" />
             <element signature="e#3192#3193#0" expanded="true" />
             <element signature="e#3681#3719#0" expanded="true" />
+            <element signature="e#4469#4470#0" expanded="true" />
+            <element signature="e#4555#4556#0" expanded="true" />
             <element signature="e#4646#4647#0" expanded="true" />
             <element signature="e#4690#4691#0" expanded="true" />
           </folding>
