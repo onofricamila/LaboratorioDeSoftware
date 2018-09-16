@@ -23,6 +23,9 @@ public class App {
     private JButton playButton;
     private JButton undoButton;
     private JButton resetButton;
+    private JPanel pentagramMelody;
+    private JTextField melodyComposerField;
+    private JButton playButton1;
     private List notes;
     private Map<PentagramPosition, String> melody;
     private List pentagramPositions;
@@ -110,6 +113,13 @@ public class App {
                 resetPentagramTable();
                 melody.clear();
                 fillMelodyField();
+            }
+        });
+
+        playButton1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                player.play(melodyComposerField.getText());
             }
         });
     }
