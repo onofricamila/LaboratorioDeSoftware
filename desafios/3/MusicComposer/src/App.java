@@ -1,10 +1,11 @@
+import org.jfugue.player.Player;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class App {
     private JButton redondaButton;
@@ -23,8 +24,9 @@ public class App {
     private JButton undoButton;
     private JButton resetButton;
     private List notes;
-    private List melody;
+    private Map<PentagramPosition, String> melody;
     private List pentagramPositions;
+    private Player player;
 
     private void addActionListener(JButton jButton, List list){
         jButton.addActionListener(new ActionListener() {
@@ -46,14 +48,15 @@ public class App {
     }
 
     public void fillMelodyField(){
-        melodyField.setText(String.join(" ", melody));
+        melodyField.setText(String.join(" ", melody.values()));
     }
 
     public App() {
 
         notes = new ArrayList();
-        melody = new ArrayList();
+        melody = new LinkedHashMap<>();
         pentagramPositions = new ArrayList();
+        player = new Player();
 
         this.initializePentagramPositions(pentagramPositions);
 
@@ -78,7 +81,7 @@ public class App {
             public void mouseReleased(MouseEvent e) {
                 JTable target = (JTable) e.getSource();
                 setCellValue(target, target.getSelectedColumn(), target.getSelectedRow());
-                melody.add(pentagramPositions.get(target.getSelectedRow()).toString() + '5' + notes.get(notes.size() -1 ).toString()); // Bug
+                melody.put(new PentagramPosition(target.getSelectedRow(), target.getSelectedColumn()), pentagramPositions.get(target.getSelectedRow()).toString() + '5' + notes.get(notes.size() -1 ).toString()); // Bug
                 fillMelodyField();
             }
         });
@@ -86,7 +89,18 @@ public class App {
         playButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                player.play(String.join(" ", melody.values()));
+            }
+        });
 
+        undoButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                List<Map.Entry<PentagramPosition, String>> entryList = new ArrayList<Map.Entry<PentagramPosition, String>>(melody.entrySet());
+                Map.Entry<PentagramPosition, String> lastEntry = entryList.get(entryList.size()-1);
+                melody.remove(lastEntry.getKey());
+                fillMelodyField();
+                pentagramTable.setValueAt("", lastEntry.getKey().getRow(), lastEntry.getKey().getColumn());
             }
         });
     }
