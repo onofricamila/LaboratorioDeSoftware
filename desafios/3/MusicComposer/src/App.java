@@ -103,6 +103,22 @@ public class App {
                 pentagramTable.setValueAt("", lastEntry.getKey().getRow(), lastEntry.getKey().getColumn());
             }
         });
+
+        resetButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                resetPentagramTable();
+                melody.clear();
+                fillMelodyField();
+            }
+        });
+    }
+    
+    private void resetPentagramTable(){
+        for(Map.Entry<PentagramPosition, String> entry : melody.entrySet()) {
+            PentagramPosition key = entry.getKey();
+            pentagramTable.setValueAt("", key.getRow(), key.getColumn());
+        }
     }
 
     private void setCellValue(JTable target, Integer row, Integer column) {
@@ -119,7 +135,6 @@ public class App {
         pentagramTable = new JTable(rows, columns){
             @Override
             public boolean isCellEditable(int row, int column) {
-                //all cells false
                 return false;
             }
         };
