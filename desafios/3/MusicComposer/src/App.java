@@ -95,7 +95,7 @@ public class App {
                 if (!notes.isEmpty()) {
                     JTable target = (JTable) e.getSource();
                     setCellValue(target, target.getSelectedColumn(), target.getSelectedRow());
-                    melody.put(new PentagramPosition(target.getSelectedRow(), target.getSelectedColumn()), pentagramPositions.get(target.getSelectedRow()).toString() + '5' + notes.get(notes.size() - 1).toString());
+                    melody.put(new PentagramPosition(target.getSelectedRow(), target.getSelectedColumn()), pentagramPositions.get(target.getSelectedRow()).toString() + notes.get(notes.size() - 1).toString());
                     fillMelodyField();
                 }
             }
