@@ -30,6 +30,7 @@ public class App {
     private JTextField melodyComposerField;
     private JButton playButton1;
     private JPanel instructionsPanel;
+    private JTextPane INSTRUCCIONESLaTablaDeTextPane;
     private List notes;
     private Map<PentagramPosition, String> melody;
     private List pentagramPositions;
