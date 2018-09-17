@@ -47,15 +47,17 @@ public class App {
         });
     }
 
-    // each letter of the american cipher referring a 'level' in the pentagram
+    // each letter of the american cipher referring a 'level' in the pentagram. Since the first row from above the table
+    // has 0 as an index, the letters have to be added in inverse order to the list to be able to represent the
+    // pentagram properly
     private void initializePentagramPositions(List pentagramPositions){
-        pentagramPositions.add('C');
-        pentagramPositions.add('D');
-        pentagramPositions.add('E');
-        pentagramPositions.add('F');
-        pentagramPositions.add('G');
-        pentagramPositions.add('A');
         pentagramPositions.add('B');
+        pentagramPositions.add('A');
+        pentagramPositions.add('G');
+        pentagramPositions.add('F');
+        pentagramPositions.add('E');
+        pentagramPositions.add('D');
+        pentagramPositions.add('C');
     }
 
     // set melody read-only field value according to pentagram

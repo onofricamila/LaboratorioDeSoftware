@@ -110,7 +110,7 @@
               </grid>
             </constraints>
             <properties>
-              <text value="INSTRUCCIONES: la tabla de arriba representa a un pentagrama. Solamente se puede reproducir un acorde de 5ta. La idea es clickear el boton de la nota que se quiere agregar, y seleccionar el lugar en el pentagrama. Considerar se recuerda la ultima nota seleccionada por lo que no es necesario volver a clickear para usar la misma. Aqui abajo se podrá ver el output generado, pudiendo reproducirlo, borrar la ultima nota agregada, o bien resetear el pentagrama."/>
+              <text value="INSTRUCCIONES: la tabla de arriba representa a un pentagrama. Solamente se puede reproducir un acorde de 5ta. Osea, vamos a poder tocar 'do re mi fa sol la si' y luego no podremos subir en la escala de agudos. La idea es clickear el boton de la nota que se quiere agregar, y seleccionar el lugar en el pentagrama. Considerar se recuerda la ultima nota seleccionada por lo que no es necesario volver a clickear para usar la misma. Aqui abajo se podrá ver el output generado, pudiendo reproducirlo, borrar la ultima nota agregada, o bien resetear el pentagrama."/>
             </properties>
           </component>
         </children>
@@ -177,7 +177,7 @@
             </constraints>
             <properties>
               <labelFor value="f58ed"/>
-              <text value="Ahora, ingresa una melodía a reproducir:"/>
+              <text value="Ahora, ingresa una melodía a reproducir (en cifrado americano):"/>
             </properties>
           </component>
           <component id="f58ed" class="javax.swing.JTextField" binding="melodyComposerField">
