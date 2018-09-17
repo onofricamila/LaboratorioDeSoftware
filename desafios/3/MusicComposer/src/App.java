@@ -1,11 +1,14 @@
 import org.jfugue.player.Player;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableCellRenderer;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.*;
+import java.util.List;
 
 public class App {
     private JButton redondaButton;
@@ -82,10 +85,12 @@ public class App {
         pentagramTable.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseReleased(MouseEvent e) {
-                JTable target = (JTable) e.getSource();
-                setCellValue(target, target.getSelectedColumn(), target.getSelectedRow());
-                melody.put(new PentagramPosition(target.getSelectedRow(), target.getSelectedColumn()), pentagramPositions.get(target.getSelectedRow()).toString() + '5' + notes.get(notes.size() -1 ).toString()); // Bug
-                fillMelodyField();
+                if (!notes.isEmpty()) {
+                    JTable target = (JTable) e.getSource();
+                    setCellValue(target, target.getSelectedColumn(), target.getSelectedRow());
+                    melody.put(new PentagramPosition(target.getSelectedRow(), target.getSelectedColumn()), pentagramPositions.get(target.getSelectedRow()).toString() + '5' + notes.get(notes.size() - 1).toString()); // Bug
+                    fillMelodyField();
+                }
             }
         });
 
@@ -139,6 +144,8 @@ public class App {
 
     private void createUIComponents() {
         pentagramPanel = new JPanel();
+
+
         Integer rows = 7;
         Integer columns = 20;
 
@@ -147,7 +154,14 @@ public class App {
             public boolean isCellEditable(int row, int column) {
                 return false;
             }
+
         };
+
+        // Make table background transparent
+        pentagramTable.setOpaque(false);
+        ((DefaultTableCellRenderer)pentagramTable.getDefaultRenderer(Object.class)).setOpaque(false);
+
+        //        pentagramTable.setShowGrid(false);
 
         pentagramPanel.add(pentagramTable);
     }
