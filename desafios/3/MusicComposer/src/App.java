@@ -1,3 +1,4 @@
+import com.sun.deploy.panel.JreTableModel;
 import org.jfugue.player.Player;
 
 import javax.swing.*;
@@ -170,6 +171,7 @@ public class App {
                 return false;
             }
 
+
             // show img as table background. We tried but img does not match with our table cells
             /*@Override
             protected void paintComponent(Graphics g) {
@@ -184,12 +186,23 @@ public class App {
             }*/
         };
 
+        pentagramTable.setDefaultRenderer(Object.class, new DefaultTableCellRenderer()
+        {
+            @Override
+            public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column)
+            {
+                final Component c = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
+                c.setBackground(row % 2 == 0 & row != 6 ? Color.LIGHT_GRAY : Color.WHITE);
+                return c;
+            }
+        });
 
         // table background transparent
-        pentagramTable.setOpaque(false);
-        ((DefaultTableCellRenderer)pentagramTable.getDefaultRenderer(Object.class)).setOpaque(false);
-                  // hide table grid
-//                pentagramTable.setShowGrid(false);
+        /*pentagramTable.setOpaque(false);
+        ((DefaultTableCellRenderer)pentagramTable.getDefaultRenderer(Object.class)).setOpaque(false);*/
+
+        // hide table grid
+//        pentagramTable.setShowGrid(false);
 
         pentagramPanel.add(pentagramTable);
     }
