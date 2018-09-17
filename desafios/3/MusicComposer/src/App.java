@@ -145,6 +145,7 @@ public class App {
     private void createUIComponents() {
         pentagramPanel = new JPanel();
 
+        final ImageIcon icon = new ImageIcon("penta1.jpg");
 
         Integer rows = 7;
         Integer columns = 20;
@@ -155,13 +156,24 @@ public class App {
                 return false;
             }
 
+            @Override
+            protected void paintComponent(Graphics g) {
+                Graphics2D g2d = (Graphics2D) g.create();
+                g2d.setColor(getBackground());
+                g2d.fillRect(0, 0, getWidth(), getHeight());
+                g2d.setColor(Color.RED);
+                g2d.drawLine(0, 0, getWidth(), getHeight());
+                g.drawImage(icon.getImage(), 0, 0, getWidth(), getHeight(), this);
+                super.paintComponent(g2d); //To change body of generated methods, choose Tools | Templates.
+                g2d.dispose();
+            }
         };
 
         // Make table background transparent
         pentagramTable.setOpaque(false);
         ((DefaultTableCellRenderer)pentagramTable.getDefaultRenderer(Object.class)).setOpaque(false);
 
-        //        pentagramTable.setShowGrid(false);
+                pentagramTable.setShowGrid(false);
 
         pentagramPanel.add(pentagramTable);
     }
