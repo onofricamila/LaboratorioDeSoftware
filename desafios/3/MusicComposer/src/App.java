@@ -104,11 +104,13 @@ public class App {
         undoButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                List<Map.Entry<PentagramPosition, String>> entryList = new ArrayList<Map.Entry<PentagramPosition, String>>(melody.entrySet());
-                Map.Entry<PentagramPosition, String> lastEntry = entryList.get(entryList.size()-1);
-                melody.remove(lastEntry.getKey());
-                fillMelodyField();
-                pentagramTable.setValueAt("", lastEntry.getKey().getRow(), lastEntry.getKey().getColumn());
+                if (!melody.isEmpty()) {
+                    List<Map.Entry<PentagramPosition, String>> entryList = new ArrayList<Map.Entry<PentagramPosition, String>>(melody.entrySet());
+                    Map.Entry<PentagramPosition, String> lastEntry = entryList.get(entryList.size()-1);
+                    melody.remove(lastEntry.getKey());
+                    fillMelodyField();
+                    pentagramTable.setValueAt("", lastEntry.getKey().getRow(), lastEntry.getKey().getColumn());
+                }
             }
         });
 
