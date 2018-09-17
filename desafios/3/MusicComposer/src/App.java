@@ -29,6 +29,7 @@ public class App {
     private JPanel pentagramMelody;
     private JTextField melodyComposerField;
     private JButton playButton1;
+    private JPanel instructionsPanel;
     private List notes;
     private Map<PentagramPosition, String> melody;
     private List pentagramPositions;
@@ -147,7 +148,7 @@ public class App {
     private void createUIComponents() {
         pentagramPanel = new JPanel();
 
-        final ImageIcon icon = new ImageIcon("penta2.png");
+        final ImageIcon icon = new ImageIcon("penta4.png");
 
         Integer rows = 7;
         Integer columns = 20;
