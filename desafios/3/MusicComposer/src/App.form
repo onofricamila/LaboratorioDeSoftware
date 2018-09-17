@@ -81,7 +81,7 @@
           </component>
         </children>
       </grid>
-      <grid id="c0673" binding="pentagramPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="c0673" binding="pentagramPanel" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -101,6 +101,16 @@
               <intercellSpacing width="1" height="1"/>
               <rowHeight value="16"/>
               <toolTipText value=""/>
+            </properties>
+          </component>
+          <component id="72228" class="javax.swing.JTextPane" binding="INSTRUCCIONESLaTablaDeTextPane" default-binding="true">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="50"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value="INSTRUCCIONES: la tabla de arriba representa a un pentagrama. Solamente se puede reproducir un acorde de 5ta. La idea es clickear el boton de la nota que se quiere agregar, y seleccionar el lugar en el pentagrama. Considerar se recuerda la ultima nota seleccionada por lo que no es necesario volver a clickear para usar la misma. Aqui abajo se podrá ver el output generado, pudiendo reproducirlo, borrar la ultima nota agregada, o bien resetear el pentagrama."/>
             </properties>
           </component>
         </children>
@@ -167,7 +177,7 @@
             </constraints>
             <properties>
               <labelFor value="f58ed"/>
-              <text value="Ingrese una melodía:"/>
+              <text value="Ahora, ingresa una melodía a reproducir:"/>
             </properties>
           </component>
           <component id="f58ed" class="javax.swing.JTextField" binding="melodyComposerField">
