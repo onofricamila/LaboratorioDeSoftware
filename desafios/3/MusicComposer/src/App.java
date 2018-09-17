@@ -88,7 +88,7 @@ public class App {
                 if (!notes.isEmpty()) {
                     JTable target = (JTable) e.getSource();
                     setCellValue(target, target.getSelectedColumn(), target.getSelectedRow());
-                    melody.put(new PentagramPosition(target.getSelectedRow(), target.getSelectedColumn()), pentagramPositions.get(target.getSelectedRow()).toString() + '5' + notes.get(notes.size() - 1).toString()); // Bug
+                    melody.put(new PentagramPosition(target.getSelectedRow(), target.getSelectedColumn()), pentagramPositions.get(target.getSelectedRow()).toString() + '5' + notes.get(notes.size() - 1).toString());
                     fillMelodyField();
                 }
             }
@@ -145,7 +145,7 @@ public class App {
     private void createUIComponents() {
         pentagramPanel = new JPanel();
 
-        final ImageIcon icon = new ImageIcon("penta1.jpg");
+        final ImageIcon icon = new ImageIcon("penta2.png");
 
         Integer rows = 7;
         Integer columns = 20;
@@ -163,17 +163,18 @@ public class App {
                 g2d.fillRect(0, 0, getWidth(), getHeight());
                 g2d.setColor(Color.RED);
                 g2d.drawLine(0, 0, getWidth(), getHeight());
-                g.drawImage(icon.getImage(), 0, 0, getWidth(), getHeight(), this);
+//                g.drawImage(icon.getImage(), 0, 0, getWidth(), getHeight(), this);
                 super.paintComponent(g2d); //To change body of generated methods, choose Tools | Templates.
                 g2d.dispose();
             }
         };
 
+
         // Make table background transparent
         pentagramTable.setOpaque(false);
         ((DefaultTableCellRenderer)pentagramTable.getDefaultRenderer(Object.class)).setOpaque(false);
 
-                pentagramTable.setShowGrid(false);
+//                pentagramTable.setShowGrid(false);
 
         pentagramPanel.add(pentagramTable);
     }
