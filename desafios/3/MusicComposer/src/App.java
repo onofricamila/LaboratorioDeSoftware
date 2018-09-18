@@ -1,4 +1,3 @@
-import com.sun.deploy.panel.JreTableModel;
 import org.jfugue.player.Player;
 
 import javax.swing.*;
@@ -163,8 +162,6 @@ public class App {
     private void createUIComponents() {
         pentagramPanel = new JPanel();
 
-        final ImageIcon icon = new ImageIcon("penta4.png");
-
         Integer rows = 7;
         Integer columns = 20;
         pentagramTable = new JTable(rows, columns){
@@ -173,19 +170,6 @@ public class App {
                 return false;
             }
 
-
-            // show img as table background. We tried but img does not match with our table cells
-            /*@Override
-            protected void paintComponent(Graphics g) {
-                Graphics2D g2d = (Graphics2D) g.create();
-                g2d.setColor(getBackground());
-                g2d.fillRect(0, 0, getWidth(), getHeight());
-                g2d.setColor(Color.RED);
-                g2d.drawLine(0, 0, getWidth(), getHeight());
-                g.drawImage(icon.getImage(), 0, 0, getWidth(), getHeight(), this);
-                super.paintComponent(g2d); //To change body of generated methods, choose Tools | Templates.
-                g2d.dispose();
-            }*/
         };
 
         pentagramTable.setDefaultRenderer(Object.class, new DefaultTableCellRenderer()
@@ -198,13 +182,6 @@ public class App {
                 return c;
             }
         });
-
-        // table background transparent
-        /*pentagramTable.setOpaque(false);
-        ((DefaultTableCellRenderer)pentagramTable.getDefaultRenderer(Object.class)).setOpaque(false);*/
-
-        // hide table grid
-//        pentagramTable.setShowGrid(false);
 
         pentagramPanel.add(pentagramTable);
     }
