@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4729fa10-5b5b-4635-8fb7-f187a3718471" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MusicComposer/penta1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MusicComposer/penta4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MusicComposer/penta5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MusicComposer/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/MusicComposer/src/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MusicComposer/src/penta1.jpg" beforeDir="false" />
-    </list>
+    <list default="true" id="4729fa10-5b5b-4635-8fb7-f187a3718471" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,13 +15,18 @@
       <file leaf-file-name="App.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MusicComposer/src/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
+            <state relative-caret-position="2490">
               <caret line="184" lean-forward="true" selection-start-line="184" selection-end-line="184" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="App.form" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MusicComposer/src/App.form">
+          <provider selected="true" editor-type-id="ui-designer" />
         </entry>
       </file>
     </leaf>
@@ -40,6 +38,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/MusicComposer/src/App.java" />
+        <option value="$PROJECT_DIR$/MusicComposer/src/App.form" />
       </list>
     </option>
   </component>
@@ -75,6 +74,12 @@
               <item name="3" type="b2602c69:ProjectViewProjectNode" />
               <item name="MusicComposer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MusicComposer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="App" type="e9f4de52:FormNode" />
             </path>
           </expand>
           <select />
@@ -167,12 +172,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1537232822865</updated>
-      <workItem from="1537232827478" duration="350000" />
+      <workItem from="1537232827478" duration="710000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="350000" />
+    <option name="totallyTimeSpent" value="710000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="49" y="27" width="1317" height="741" extended-state="6" />
@@ -188,11 +193,11 @@
       <window_info anchor="right" id="Maven Projects" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3294509" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3294509" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24940991" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24940991" />
       <window_info anchor="right" id="Database" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3294509" />
       <window_info id="Learn" />
@@ -233,9 +238,12 @@
     <entry file="file://$PROJECT_DIR$/MusicComposer/penta1.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/MusicComposer/src/App.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/MusicComposer/src/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
+        <state relative-caret-position="2490">
           <caret line="184" lean-forward="true" selection-start-line="184" selection-end-line="184" />
           <folding>
             <element signature="imports" expanded="true" />
