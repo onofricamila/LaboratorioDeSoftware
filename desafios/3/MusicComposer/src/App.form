@@ -3,7 +3,7 @@
   <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="3" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="880" height="375"/>
+      <xy x="20" y="20" width="880" height="407"/>
     </constraints>
     <properties/>
     <border type="none"/>
@@ -110,7 +110,7 @@
               </grid>
             </constraints>
             <properties>
-              <text value="INSTRUCCIONES: la tabla de arriba representa a un pentagrama. Solamente se puede reproducir un acorde de 5ta. Osea, vamos a poder tocar 'do re mi fa sol la si' y luego no podremos subir en la escala de agudos. La idea es clickear el boton de la nota que se quiere agregar, y seleccionar el lugar en el pentagrama. Considerar se recuerda la ultima nota seleccionada por lo que no es necesario volver a clickear para usar la misma. Aqui abajo se podrá ver el output generado, pudiendo reproducirlo, borrar la ultima nota agregada, o bien resetear el pentagrama."/>
+              <text value="INSTRUCCIONES: La tabla de arriba representa un pentagrama. Solamente se puede reproducir un acorde de 5ta. Es decir que vamos a poder tocar 'do', 're', 'mi', 'fa', 'so', 'la' y 'si' y luego no podremos subir en la escala de agudos. La idea es clickear el boton de la nota que se quiere agregar, y seleccionar el lugar en el pentagrama. Considerar se recuerda la ultima nota seleccionada, por lo que no es necesario volver a clickear para usar la misma. Aqui abajo se podrá ver el output generado, pudiendo reproducirlo, borrar la última nota agregada, o bien resetear el pentagrama."/>
             </properties>
           </component>
         </children>
