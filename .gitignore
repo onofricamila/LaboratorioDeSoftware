@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 **/.idea/**
+**/out/**
 **/.settings/**
 =======
 *.idea/**
