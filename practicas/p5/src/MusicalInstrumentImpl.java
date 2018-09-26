@@ -16,7 +16,7 @@ public abstract class MusicalInstrumentImpl implements MusicalInstrument {
 
 	@Override
 	public void hacerSonar(Note n, int duration) {
-		System.out.println("Sonando ... " + n.getUSCipherLetter() + " con duración: " + duration);
+		System.out.println("Sonando ... " + n.getUSCipherLetter() + " con duracion: " + duration);
 	}
 
 	@Override
