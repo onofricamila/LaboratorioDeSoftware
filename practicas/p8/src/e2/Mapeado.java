@@ -1,6 +1,6 @@
 package e2;
 
-@Archivo(nombre="ArchivoMapeado.txt")
+@Archivo(nombre="ArchivoMapeadoTest.txt")
 public class Mapeado {
     @AlmacenarAtributo
     private String valor = "Default1";
