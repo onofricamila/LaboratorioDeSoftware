@@ -2,7 +2,7 @@ package e2;
 
 // Por el bloque Synchronized (System.out), se va a lograr exclusion mutua al ejecutar el for y tipo va a imprimir
 // la frase primero el thread 1, luego el 2, y último el 3. Si no fuera por eso, imprimirian todos desordenados.
-// El tipo de lock usado es Monitor.
+// El tipo de lock usado es: Monitor.
 
 public class TestSynchronized extends Thread {
     String[] frase = {"España", "en", "los", "diarios", "de", "mi", "vejez"};
