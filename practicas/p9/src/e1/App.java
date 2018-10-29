@@ -29,14 +29,14 @@ public class App {
 
     private void createUIComponents() {
         // TODO: place custom component creation code here
-        BufferedImage myPicture = null;
+        BufferedImage bufferedImage = null;
 
         try {
-            myPicture = ImageIO.read(new File("src/e1/burger.jpg"));
+            bufferedImage = ImageIO.read(new File("src/e1/burger.jpg"));
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        imgLabel = new JLabel(new ImageIcon(myPicture));
+        imgLabel = new JLabel(new ImageIcon(bufferedImage));
     }
 }
