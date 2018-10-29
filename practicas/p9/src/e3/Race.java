@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+// TODO reset race --> interrupt runnable instances via executor
 public class Race {
     private JPanel mainPanel;
     private JButton startButton;
