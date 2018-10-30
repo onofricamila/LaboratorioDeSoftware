@@ -1,6 +1,7 @@
 package e3;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class Runner implements Runnable {
     private String nickName;
@@ -32,7 +33,8 @@ public class Runner implements Runnable {
         for (int i = 0; i < pasos; i++) {
                 recorrido += "-";
                 m.run(nickName + recorrido, pista);
-            }
         }
+
     }
+}
 

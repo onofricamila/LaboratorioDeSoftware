@@ -9,7 +9,12 @@ import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-// TODO reset race --> interrupt runnable instances via executor
+// si ponemos solo 3 threads en el pool, correran 3 y a medida que vayan terminando los anteriores empezaran a correr
+// los que faltan
+// TODO reset race -->
+// no se puede interrumpir los thrads porque sale un problema por el metodo sync ... es coomo
+// que dice imposible interrumpir thread que está tratando de adquirir lock ... si no fuera por eso, mandando un dhutdownnow
+// al excecutor, andaría
 public class Race {
     private JPanel mainPanel;
     private JButton startButton;
@@ -18,11 +23,10 @@ public class Race {
     private JTextField textField2;
     private JTextField textField3;
     private JTextField textField4;
-    private JButton resetButton;
     int pasos = 100;
     private List<Runner> runners = new ArrayList<>();
     private List<JTextField> textFields = new ArrayList<>();
-    private ExecutorService exec = Executors.newFixedThreadPool(5);
+    private ExecutorService exec = Executors.newFixedThreadPool(3);
 
     public Race() {
         initializeRunners();
@@ -35,16 +39,6 @@ public class Race {
                 startRace();
             }
         });
-        resetButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                resetRace();
-            }
-        });
-    }
-
-    private void resetRace() {
-        exec.shutdownNow();
 
     }
 
