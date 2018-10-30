@@ -28,9 +28,7 @@ public class App {
     }
 
     private void createUIComponents() {
-        // TODO: place custom component creation code here
         BufferedImage bufferedImage = null;
-
         try {
             bufferedImage = ImageIO.read(new File("src/e1/burger.jpg"));
         } catch (IOException e) {

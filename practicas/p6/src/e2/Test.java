@@ -16,6 +16,14 @@ public class Test {
 
         Veterinaria <? extends Animal> vet2 = new Veterinaria<Gato>();
         // no anda esto de setearle algo
-         // vet2.setAnimal(new Gato());
+        // vet2.setAnimal(new Gato());
+
+         Veterinaria <Animal> vet3 = new Veterinaria <Animal>();
+         vet3.setAnimal(new Animal());
+         Veterinaria <? super Gato> vet4 = vet3;
+         vet4.getAnimal();
+         // no anda esto
+        // vet4.setAnimal(new Animal());
+
     }
 }

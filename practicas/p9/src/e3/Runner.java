@@ -1,21 +1,20 @@
 package e3;
 
 import javax.swing.*;
-import java.awt.*;
 
 public class Runner implements Runnable {
     private String nickName;
-    private int pasos;
-    private String recorrido = "";
-    private JTextField pista;
+    private int longitudCarrera;
+    private String recorridoHastaElMomento = "";
+    private JTextField jTextField;
 
-    public Runner(String nickName, int pasos) {
+    public Runner(String nickName, int longitudCarrera) {
         this.nickName = nickName;
-        this.pasos = pasos;
+        this.longitudCarrera = longitudCarrera;
     }
 
-    public void setPista(JTextField pista) {
-        this.pista = pista;
+    public void setjTextField(JTextField jTextField) {
+        this.jTextField = jTextField;
     }
 
     public String getNickName() {
@@ -30,9 +29,9 @@ public class Runner implements Runnable {
     @Override
     public void run() {
         Monitor m = Monitor.INSTANCE;
-        for (int i = 0; i < pasos; i++) {
-                recorrido += "-";
-                m.run(nickName + recorrido, pista);
+        for (int i = 0; i < longitudCarrera; i++) {
+                recorridoHastaElMomento += "-";
+                m.wannaRun(nickName + recorridoHastaElMomento, jTextField);
         }
 
     }

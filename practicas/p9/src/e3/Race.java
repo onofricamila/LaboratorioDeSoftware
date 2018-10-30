@@ -23,7 +23,7 @@ public class Race {
     private JTextField textField2;
     private JTextField textField3;
     private JTextField textField4;
-    int pasos = 100;
+    int longitudCarrera = 100;
     private List<Runner> runners = new ArrayList<>();
     private List<JTextField> textFields = new ArrayList<>();
     private ExecutorService exec = Executors.newFixedThreadPool(3);
@@ -54,7 +54,7 @@ public class Race {
         for (int i = 0; i < runners.size(); i++) {
             Runner r = runners.get(i);
             JTextField t = textFields.get(i);
-            r.setPista(t);
+            r.setjTextField(t);
             t.setText(r.getNickName());
             t.setFont(font1);
         }
@@ -62,7 +62,7 @@ public class Race {
 
     private void initializeRunners() {
         for (int i = 0; i < 5; i++) {
-            Runner r = new Runner("runner"+i, pasos);
+            Runner r = new Runner("runner"+i, longitudCarrera);
             runners.add(r);
         }
     }

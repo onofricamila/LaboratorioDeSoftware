@@ -1,7 +1,7 @@
 package e2;
 
 // Por el bloque Synchronized (System.out), se va a lograr exclusion mutua al ejecutar el for y tipo va a imprimir
-// la frase primero el thread 1, luego el 2, y último el 3. Si no fuera por eso, imprimirian todos desordenados.
+// la frase sin interrupciones, de a 1 thread. Si no fuera por eso, imprimirian todos pedacitos de la frase intercalados.
 // El tipo de lock usado es: Monitor.
 
 public class TestSynchronized extends Thread {

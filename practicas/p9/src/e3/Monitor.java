@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 public enum Monitor{
     INSTANCE;
 
-    public synchronized void run(String s, JTextField t) {
+    public synchronized void wannaRun(String s, JTextField t) {
         t.setText(s);
         try {
             TimeUnit.MILLISECONDS.sleep(25);

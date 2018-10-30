@@ -2,7 +2,7 @@ package e4;
 
  /*
     Los metodos que sobreescriben deben tirar las mismas excepciones o menos (y algunas agregadas) que los sobreescriptos.
-        Encuentro.penal throws Mano no deberia tirar Mano.
+    Encuentro.penal throws Mano no deberia tirar Mano.
     Encuentro.evento esta definido dos veces
     En los catch de Encuentro.main se define e multiples veces dentro de un try que ya definio e
  */

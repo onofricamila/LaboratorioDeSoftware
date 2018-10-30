@@ -25,7 +25,7 @@ public class Contenedor {
         }
     }
     
-    private static void proccess(Object object) throws NotAServerException, IOException{
+    private static void proccess(Object object) throws NotAServerException{
         Class myClass = object.getClass();
         Servidor servidor = (Servidor) myClass.getAnnotation(Servidor.class);
         if (servidor == null) throw new NotAServerException();
